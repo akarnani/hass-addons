@@ -13,7 +13,5 @@ jq --raw-output ".allowed_emails | .[]" $CONFIG_PATH > /data/emails
                 --upstream http://172.17.0.1:8123 \
                 --cookie-secret $cookie_secret \
                 --cookie-refresh "1h" \
-                --redirect-url "http://localhost:4180/oauth2/callback" \
-                --tls-cert /ssl/$cert
-                --tls-key /ssl/$key
+                -skip-provider-button \
                 --authenticated-emails-file /data/emails
