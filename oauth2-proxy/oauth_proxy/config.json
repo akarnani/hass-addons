@@ -1,0 +1,29 @@
+{
+  "name": "OAuthProxy",
+  "version": "0.1",
+  "slug": "oauth_proxy",
+  "description": "Oauth Proxy to protect hass.io",
+  "url": "https://github.com/akarnani/hassio-addons/oauth_proxy"
+  "startup": "services",
+  "boot": "auto",
+  "map": ["ssl"],
+  "options": {
+      "client_scret": null,
+      "client_id": null,
+      "allowed_emails": null,
+      "cookie_secret": null,
+      "certfile": "fullchain.pem",
+      "keyfile": "privkey.pem"
+  },
+  "schema": {
+      "client_scret": "str",
+      "client_id": "str",
+      "allowed_emails": ["str"],
+      "cookie_secret": "str",
+      "certfile": "str",
+      "keyfile": "str"
+  },
+  "ports": {
+    "443/tcp": 443
+  }
+}
