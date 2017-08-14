@@ -6,7 +6,6 @@
   "url": "https://github.com/akarnani/hassio-addons/tree/master/oauth2-proxy",
   "startup": "services",
   "boot": "auto",
-  "map": ["ssl"],
   "options": {
       "client_scret": null,
       "client_id": null,
