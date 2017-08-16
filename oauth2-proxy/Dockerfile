@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM %%BASE_IMAGE%%
 
 RUN apk update && \
     apk --no-cache add go libc-dev git jq ca-certificates && \
