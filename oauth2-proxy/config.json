@@ -7,7 +7,7 @@
   "startup": "services",
   "boot": "auto",
   "options": {
-      "client_scret": null,
+      "client_secret": null,
       "client_id": null,
       "allowed_emails": null,
       "cookie_secret": null,
@@ -15,7 +15,7 @@
       "letsencryptAdminEmail": null
   },
   "schema": {
-      "client_scret": "str",
+      "client_secret": "str",
       "client_id": "str",
       "allowed_emails": ["str"],
       "cookie_secret": "str",
