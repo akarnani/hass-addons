@@ -1,6 +1,6 @@
 {
   "name": "OAuthProxy",
-  "version": "0.3",
+  "version": "0.3.1",
   "slug": "oauth_proxy",
   "description": "Oauth Proxy to protect hass.io",
   "url": "https://github.com/akarnani/hassio-addons/tree/master/oauth2-proxy",
