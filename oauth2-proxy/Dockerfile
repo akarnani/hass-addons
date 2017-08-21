@@ -1,5 +1,7 @@
 FROM %%BASE_IMAGE%%
 
+ADD config.json /tmp/config.json
+
 RUN apk update && \
     apk --no-cache add go libc-dev git jq ca-certificates && \
     go get github.com/akarnani/oauth2_proxy && \

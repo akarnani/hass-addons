@@ -10,6 +10,7 @@ domain=$(jq --raw-output ".domain" $CONFIG_PATH)
 email=$(jq --raw-output ".letsencryptAdminEmail" $CONFIG_PATH)
 jq --raw-output ".allowed_emails | .[]" $CONFIG_PATH > /data/emails
 
+/root/go/bin/oauth2_proxy -version
 
 /root/go/bin/redirect-https &
 
