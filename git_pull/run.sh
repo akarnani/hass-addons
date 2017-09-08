@@ -33,8 +33,8 @@ while true; do
         # Files have changed & check config
         if [ ! -z "$changed_files" ]; then
             echo "[Info] updating local checkout"
-            git reset --hard FETCH_HEAD
-            
+            git reset --hard @{u}
+
             echo "[Info] check Home-Assistant config"
             if api_ret="$(curl -s -X POST http://hassio/homeassistant/check)"; then
                 result="$(echo "$api_ret" | jq --raw-output ".result")"
