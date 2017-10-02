@@ -14,6 +14,8 @@ jq --raw-output ".allowed_emails | .[]" $CONFIG_PATH > /data/emails
 
 /root/go/bin/redirect-https &
 
+echo $domain
+
 /root/go/bin/oauth2_proxy --client-id $id \
                 --https-address ":443" \
                 --client-secret $secret \
