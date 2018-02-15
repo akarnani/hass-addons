@@ -23,5 +23,6 @@ jq --raw-output ".allowed_emails | .[]" $CONFIG_PATH > /data/emails
                 --skip-provider-button \
                 --authenticated-emails-file /data/emails \
                 --letsencrypt-enabled=true \
-                --letsencrypt-host "$domain" \
+                --letsencrypt-address=":80"
+                --letsencrypt-host $domain \
                 --letsencrypt-admin-email $email

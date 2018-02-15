@@ -19,8 +19,6 @@
       "client_id": "str",
       "allowed_emails": ["str"],
       "cookie_secret": "str",
-      "certfile": "str",
-      "keyfile": "str",
       "domain": "str",
       "letsencryptAdminEmail": "str"
   },
