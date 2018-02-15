@@ -12,8 +12,6 @@ jq --raw-output ".allowed_emails | .[]" $CONFIG_PATH > /data/emails
 
 /root/go/bin/oauth2_proxy -version
 
-/root/go/bin/redirect-https &
-
 /root/go/bin/oauth2_proxy --client-id $id \
                 --https-address ":443" \
                 --client-secret $secret \
@@ -23,6 +21,6 @@ jq --raw-output ".allowed_emails | .[]" $CONFIG_PATH > /data/emails
                 --skip-provider-button \
                 --authenticated-emails-file /data/emails \
                 --letsencrypt-enabled=true \
-                --letsencrypt-address=":80"
+                --letsencrypt-address=":80" \
                 --letsencrypt-host $domain \
                 --letsencrypt-admin-email $email
